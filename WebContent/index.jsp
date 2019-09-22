@@ -19,7 +19,7 @@ if (request.getParameter("NombreUsuario") != null) {
 <br>
 <jsp:useBean id="contador" class="tew.beans.Counter" scope="application"/>
 <center>
-	<jsp:getPropertyproperty= "incrementedValue" name="contador"/>visitas
+	<jsp:getPropertyproperty= "incrementedValue" name="contador"/> visitas
 </center>
 </body>
 </html>
