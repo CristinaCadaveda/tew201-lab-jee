@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf15698290959320" configfile="/gestioneitorv1_0/WebContent/WEB-INF/faces-config.xml">
   <nodes xsi:type="pageflow:PFPage" name="index.xhtml" id="pf15698430040720" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf15698430040721 pf15698430040722" path="/index.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="listado.xhtml" id="pf15698430040723" referenceLink="//@navigationRule.2/@navigationCase.0/@toViewId|" inlinks="pf15698430040721 pf15698442139768" path="/listado.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="altaForm.xhtml" id="pf15698430040724" referenceLink="//@navigationRule.2/@fromViewId|" outlinks="pf15698442139768" inlinks="pf15698430040722" path="/altaForm.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="listado.xhtml" id="pf15698430040723" referenceLink="//@navigationRule.3/@navigationCase.0/@toViewId|" inlinks="pf15698430040721 pf15698442139768 pf15698490090510" path="/listado.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="altaForm.xhtml" id="pf15698430040724" referenceLink="//@navigationRule.3/@fromViewId|" outlinks="pf15698442139768" inlinks="pf15698430040722" path="/altaForm.xhtml"/>
   <nodes xsi:type="pageflow:PFPage" name="*" id="pf15698431178165" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf15698431178166" path="*"/>
   <nodes xsi:type="pageflow:PFPage" name="error.xhtml" id="pf15698431178167" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" inlinks="pf15698431178166" path="/error.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="editForm.xhtml" id="pf15698490090511" referenceLink="//@navigationRule.3/@fromViewId|" outlinks="pf15698490090510" path="/editForm.xhtml"/>
   <links id="pf15698430040721" target="pf15698430040723" source="pf15698430040720" outcome="exito" fromaction="#{controller.listado}"/>
   <links id="pf15698430040722" target="pf15698430040724" source="pf15698430040720" outcome="alta"/>
   <links id="pf15698431178166" target="pf15698431178167" source="pf15698431178165" outcome="error"/>
   <links id="pf15698442139768" target="pf15698430040723" source="pf15698430040724" outcome="exito" fromaction="#{controller.salva}"/>
+  <links id="pf15698490090510" target="pf15698430040723" source="pf15698490090511" outcome="exito" fromaction="#{controller.salva}"/>
 </pageflow:Pageflow>
